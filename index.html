@@ -1,58 +1,51 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ApexSend Co</title>
+    <title>MTB Clothing Store</title>
+    <script defer src="store.js"></script>
     <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
 </head>
 <body>
-    <header>
-        <div class="top-bar">&#x1F4A1; Free Tracked and Insured Shipping &#x1F4A1;</div>
-        <div class="navbar">
-            <div class="logo">Apexsend Co</div>
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">All Products</a></li>
-                    <li><a href="#">Find My MTB Case</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Ambassador</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <div class="container">
+        <h1 class="title">MTB Clothing Store</h1>
+        <div id="products" class="grid"></div>
+        <div id="cart" class="cart"></div>
+    </div>
     
-    <section class="hero">
-        <div class="hero-content">
-            <button class="btn-primary">FIND MY MTB CASE</button>
-        </div>
-    </section>
-    
-    <section class="features">
-        <div class="feature-item">Dual Layer Protection</div>
-        <div class="feature-item">Safe Screen</div>
-        <div class="feature-item">Glossy Finish</div>
-        <div class="feature-item">Anti-Scratch</div>
-    </section>
-    
-    <section class="reviews">
-        <h2>Let customers speak for us</h2>
-        <div class="review-container">
-            <div class="review-card">Beautiful case design - Ian Johnson</div>
-            <div class="review-card">10/10 - Jonah Rydesh</div>
-            <div class="review-card">Best case I've ever had! - Anonymous</div>
-        </div>
-    </section>
-    
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2025 Apexsend Co. All rights reserved.</p>
-        </div>
-    </footer>
+    <script>
+        const products = [
+            { id: 1, name: "MTB Jersey", price: 49.99, image: "images/jersey.jpg" },
+            { id: 2, name: "MTB Shorts", price: 59.99, image: "images/shorts.jpg" },
+            { id: 3, name: "MTB Gloves", price: 29.99, image: "images/gloves.jpg" }
+        ];
+
+        const productContainer = document.getElementById('products');
+        const cartContainer = document.getElementById('cart');
+        let cart = [];
+
+        function addToCart(product) {
+            cart.push(product);
+            renderCart();
+        }
+
+        function renderCart() {
+            cartContainer.innerHTML = '<h2>Shopping Cart</h2>' + cart.map(item => `<p>${item.name} - $${item.price.toFixed(2)}</p>`).join('');
+        }
+
+        function renderProducts() {
+            productContainer.innerHTML = products.map(product => `
+                <div class="product">
+                    <img src="${product.image}" alt="${product.name}">
+                    <h2>${product.name}</h2>
+                    <p>$${product.price.toFixed(2)}</p>
+                    <button onclick="addToCart(${JSON.stringify(product)})">Add to Cart</button>
+                </div>
+            `).join('');
+        }
+
+        renderProducts();
+    </script>
 </body>
 </html>

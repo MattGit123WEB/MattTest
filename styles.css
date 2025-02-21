@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.top-bar {
+    background-color: #f4a261;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #264653;
+    padding: 15px;
+    color: white;
+}
+
+.logo {
+    font-size: 1.5em;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero {
+    background-color: #e76f51;
+    padding: 50px;
+}
+
+.btn-primary {
+    background-color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.feature-item {
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.reviews {
+    padding: 30px;
+}
+
+.review-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.review-card {
+    background: #e9c46a;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #264653;
+    color: white;
+    padding: 20px;
+}

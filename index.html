@@ -1,91 +1,58 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Josh Hutcherson Fan Page</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
-        }
-
-        body {
-            background: linear-gradient(135deg, #1e3c72, #2a5298);
-            color: white;
-            text-align: center;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-
-        h1 {
-            font-size: 3rem;
-            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-            animation: fadeIn 1.5s ease-in-out;
-        }
-
-        img {
-            width: 300px;
-            height: auto;
-            border-radius: 15px;
-            margin-top: 20px;
-            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s ease-in-out;
-        }
-
-        img:hover {
-            transform: scale(1.05);
-        }
-
-        p {
-            font-size: 1.3rem;
-            margin-top: 10px;
-            opacity: 0.8;
-            max-width: 600px;
-            line-height: 1.5;
-        }
-
-        .btn {
-            margin-top: 20px;
-            padding: 12px 25px;
-            font-size: 1.2rem;
-            color: white;
-            background: #ff4b2b;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: 0.3s;
-            box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        .btn:hover {
-            background: #ff3c1e;
-            transform: scale(1.05);
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-    </style>
+    <title>ApexSend Co</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
-    <h1>Josh Hutcherson Fan Page</h1>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/4/47/Josh_Hutcherson_2015.jpg" alt="Josh Hutcherson">
-    <p>Welcome to the ultimate fan page for Josh Hutcherson! Explore his career, movies, and latest updates.</p>
-    <button class="btn" onclick="location.href='https://en.wikipedia.org/wiki/Josh_Hutcherson'">Learn More</button>
+    <header>
+        <div class="top-bar">&#x1F4A1; Free Tracked and Insured Shipping &#x1F4A1;</div>
+        <div class="navbar">
+            <div class="logo">Apexsend Co</div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">All Products</a></li>
+                    <li><a href="#">Find My MTB Case</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Ambassador</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="hero-content">
+            <img src="mtb-case.jpg" alt="MTB Phone Case">
+            <button class="btn-primary">FIND MY MTB CASE</button>
+        </div>
+    </section>
+    
+    <section class="features">
+        <div class="feature-item">Dual Layer Protection</div>
+        <div class="feature-item">Safe Screen</div>
+        <div class="feature-item">Glossy Finish</div>
+        <div class="feature-item">Anti-Scratch</div>
+    </section>
+    
+    <section class="reviews">
+        <h2>Let customers speak for us</h2>
+        <div class="review-container">
+            <div class="review-card">Beautiful case design - Ian Johnson</div>
+            <div class="review-card">10/10 - Jonah Rydesh</div>
+            <div class="review-card">Best case I've ever had! - Anonymous</div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Apexsend Co. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>

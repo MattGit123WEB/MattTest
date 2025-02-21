@@ -4,8 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ApexSend Co</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .top-bar {
+            background-color: #FFD700;
+            padding: 10px;
+            font-weight: bold;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            background-color: #4267B2;
+            padding: 15px;
+            color: white;
+        }
+        .navbar ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+        }
+        .navbar ul li {
+            margin: 0 15px;
+        }
+        .navbar ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .hero {
+            background: url('mtb-case.jpg') no-repeat center;
+            background-size: cover;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .btn-primary {
+            background-color: #FF4500;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        .features {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .review-container {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+        .review-card {
+            background-color: white;
+            padding: 15px;
+            margin: 10px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -28,7 +97,6 @@
     
     <section class="hero">
         <div class="hero-content">
-            <img src="mtb-case.jpg" alt="MTB Phone Case">
             <button class="btn-primary">FIND MY MTB CASE</button>
         </div>
     </section>
